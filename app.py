@@ -57,7 +57,7 @@ pipeline = joblib.load("model_pipeline.pkl")
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to:", ["Home", "Data Overview", "Predict"])
 
-if page == "📌 Home":
+if page == "Home":
     st.title("Heart Attack Prediction App")
     st.write("""
     This interactive web application allows you to:
