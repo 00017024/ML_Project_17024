@@ -54,15 +54,26 @@ def apply_feature_engineering(df):
 
 pipeline = joblib.load("model_pipeline.pkl")
 
-# Title
-st.title("Heart Attack Risk Prediction App")
-
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to:", ["Home", "Data Overview", "Predict"])
 
-if page == "Home":
+if page == "📌 Home":
     st.title("Heart Attack Prediction App")
-    st.write("Use the sidebar to explore data or make predictions.")
+    st.write("""
+    This interactive web application allows you to:
+
+    **✔ Explore the dataset**  
+    View summary statistics and understand the distribution of medical features.
+
+    **✔ Understand preprocessing**  
+    The data is cleaned, processed, and feature-engineered exactly as in the notebook.
+
+    **✔ Predict heart disease risk**  
+    Enter patient information and receive a real-time prediction from the trained model.
+
+    Use the **sidebar** to navigate between pages.
+    """)
+
 
 
 elif page == "Data Overview":
